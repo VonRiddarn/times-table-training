@@ -1,13 +1,15 @@
 import utilities from "./utilities";
 
 const query = document.getElementById("current-query") as HTMLElement;
-
+const answers = document.getElementById("answers") as HTMLElement;
 
 let currentQuery = utilities.getRandomQuery(1, 12);
-let adjacentSolutions = utilities.getAdjacentSolutions(currentQuery);
+let solutionList = utilities.getAdjacentSolutions(currentQuery);
+solutionList.push(currentQuery.solution);
 
-query.innerHTML = `${currentQuery.a} x ${currentQuery.b} = ${currentQuery.solution}<br/>`;
+query.innerHTML = `${currentQuery.a} x ${currentQuery.b}`;
 
-adjacentSolutions.forEach(element => {
-	query.innerHTML += `${element}<br/>`;
+solutionList.forEach(element => {
+	let b = answers.appendChild(document.createElement("button") as HTMLButtonElement);
+	b.innerHTML = element.toString();
 });
