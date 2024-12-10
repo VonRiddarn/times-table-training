@@ -43,18 +43,18 @@ main p {
 main span {
 	display: grid;
 	grid-template-columns: auto auto auto;
-	gap: 1rem;
+	gap: 2rem;
 }
 
 main span button {
 	background-color: #044d8a;
 	border-color: #044d8a;
 	border-radius: 4px;
-	width: 9rem;
-	height: 3rem;
+	width: 12rem;
+	height: 4rem;
 
 	color: #ffffff;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 800;
 }
 
