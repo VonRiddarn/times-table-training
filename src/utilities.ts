@@ -2,10 +2,12 @@ import MathQuery from "./math-query";
 
 const utilities = Object.freeze({
 	
+	getRandomNumber: (min: number, max: number):  number => Math.floor(Math.random() * (max - min) + min),
+
 	getRandomQuery: (min:number, max:number): MathQuery => {
 
-		let a = Math.floor(Math.random() * (max - min) + min);
-		let b = Math.floor(Math.random() * (max - min) + min);
+		let a = utilities.getRandomNumber(min, max);
+		let b = utilities.getRandomNumber(min, max);
 
 		return {
 			a: a, 
@@ -44,7 +46,7 @@ const utilities = Object.freeze({
 
 const getAdjacentSolution = (solution: number): number => {
 	console.log(solution);
-	solution += Math.floor(Math.random() * (7 - -3) + -3);
+	solution += utilities.getRandomNumber(-3, 7);
 	console.log(solution);
 
 	return solution;
