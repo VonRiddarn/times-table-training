@@ -44,6 +44,9 @@ const utilities = Object.freeze({
 		return [...uniqueSolutions];
 	},
 
+	// Credit and great explanation: https://bost.ocks.org/mike/shuffle/
+	// It's quite hard to implement it any other way than this, it's just the algoritm in raw format.
+	// Source: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 	fisherYatesShuffle: <T>(array: T[]) => {
 	let m: number = array.length
 	let t: T;
