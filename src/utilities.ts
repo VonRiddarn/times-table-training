@@ -20,7 +20,8 @@ const utilities = Object.freeze({
 		const uniqueSolutions = new Set<number>();
 
 		// I feel the "mistake times (x) for add (+)" clause is so common it deserves to always be included.
-		uniqueSolutions.add(query.a + query.b);
+		if(query.a + query.b !== query.solution)
+			uniqueSolutions.add(query.a + query.b);
 
 		// Emergency breakout in case of endless non-random random.
 		let currentTick = 0;
