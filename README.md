@@ -9,3 +9,4 @@ This is currently a work in progress and will see many changes - this readme inc
 * Exam - X questions, no repeats, weighted towards the center of the grid
 * Endless mode (this is the one implemented)
 * Diagnostic - see what you need to train
+* Localizer for SE and EN(us)
