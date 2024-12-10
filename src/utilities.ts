@@ -43,14 +43,29 @@ const utilities = Object.freeze({
 
 		return [...uniqueSolutions];
 	},
+
+	// Credit and great explanation: https://bost.ocks.org/mike/shuffle/
+	fisherYatesShuffle: <T>(array: T[]) => {
+	let m: number = array.length
+	let t: T;
+	let i: number;
+
+	// While there remain elements to shuffle…
+	while (m) {
+
+		// Pick a remaining element…
+		i = Math.floor(Math.random() * m--);
+
+		// And swap it with the current element.
+		t = array[m];
+		array[m] = array[i];
+		array[i] = t;
+	}
+
+	return array;
+	},
 });
 
-const getAdjacentSolution = (solution: number): number => {
-	console.log(solution);
-	solution += utilities.getRandomNumber(-3, 7);
-	console.log(solution);
-
-	return solution;
-};
+const getAdjacentSolution = (solution: number): number => solution + utilities.getRandomNumber(-3, 7);
 
 export default utilities;
