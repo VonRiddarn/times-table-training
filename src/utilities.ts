@@ -4,7 +4,7 @@ const utilities = Object.freeze({
 		let a = Math.floor(Math.random() * (max - min) + min);
 		let b = Math.floor(Math.random() * (max - min) + min);
 
-		return {a: a, b: b, answer: a*b};
+		return {a: a, b: b, solution: a*b};
 	},
 });
 
