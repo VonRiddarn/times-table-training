@@ -38,8 +38,8 @@ const utilities = Object.freeze({
 
 		if(currentTick >= 100)
 			console.log("ERROR: Too many retries!");
-		else
-			console.log(`Succeeded in ${currentTick} ticks!`);
+		/*else
+			console.log(`Succeeded in ${currentTick} ticks!`);*/
 
 		return [...uniqueSolutions];
 	},
