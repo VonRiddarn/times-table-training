@@ -20,7 +20,8 @@ function refresh()
 		let b = answers.appendChild(document.createElement("button") as HTMLButtonElement);
 		b.innerHTML = element.toString();
 		b.addEventListener('click', (e) => {
-			console.log(`${element} ${element === currentQuery.solution ? "=" : "!="} ${currentQuery.solution}`);
+			let correct = element === currentQuery.solution;
+			console.log(`${correct ? "✔" : "✖"} ${element} ${correct ? "=" : "!="} ${currentQuery.solution}`);
 			refresh();
 		});
 	});
